@@ -1,0 +1,120 @@
+{
+  "modulos": [
+    {
+      "tema": "Conceptos de redes de datos",
+      "contenido": "La comunicación de datos es fundamental en la computación; no se puede concebir un sistema de información sin red. El protocolo IP (IPv4/IPv6) identifica cada dispositivo en la red para que los paquetes lleguen al destino correcto. El crecimiento de los servicios en Internet ha motivado la creación de nuevas versiones de protocolos y protocolos completamente nuevos, mejorando la competitividad de organizaciones. Objetivo: apropiarse de varios conceptos clave de redes de datos."
+    },
+    {
+      "tema": "¿Qué es una red de datos?",
+      "contenido": "Una red de datos permite compartir información entre personas y/o máquinas. El ejemplo más sencillo es dos computadores conectados directamente por un enlace físico (cable), donde el cable es el enlace (link) y cada equipo es un nodo. Puede haber enlaces punto a punto o de acceso múltiple, y distintos medios físicos (cobre, fibra, radio) con características propias de velocidad y distancia. Las redes pueden interconectarse y subdividirse en subredes."
+    },
+    {
+      "tema": "Componentes de una red",
+      "contenido": "Hardware: nodos (PCs, switches, routers, smartphones, sensores IoT) y enlaces de comunicación (cable, fibra, ondas). Software: protocolos (TCP, IP, HTTP, FTP, PPP, SNMP) que controlan envío y recepción de mensajes, y servicios que permiten intercambiar datos, programas, multimedia u otros documentos. Una red existe porque ofrece servicios útiles a los usuarios."
+    },
+    {
+      "tema": "Nodos de red",
+      "contenido": "Un nodo puede ser un punto de conexión, un punto de redistribución o un punto final de transmisión de datos. Cada nodo cuenta con direcciones físicas (MAC) y lógicas (IP) para identificarse. Existen nodos finales (asocian aplicaciones) e intermedios (pasan paquetes entre subredes)."
+    },
+    {
+      "tema": "Enlaces de red",
+      "contenido": "Los enlaces de red pueden ser guiados (cobre UTP/STP, coaxial, fibra óptica) o no guiados (radio, microondas, infrarrojo). Un modelo de enlace como un \"tubo\" relaciona latencia (longitud) y ancho de banda (área transversal); su producto (latencia × ancho de banda) indica el volumen de bits en tránsito. Ejemplos: modem 56 Kbps (RTT ≈ 87 µs, delay×BW ≈ 5 bits), Wi-Fi 54 Mbps (0,33 µs, 18 bits), satélite 45 Mbps (230 ms, 10 Mbits), fibra 10 Gbps (40 ms, 400 Mbits)."
+    },
+    {
+      "tema": "Protocolos de comunicaciones",
+      "contenido": "Un protocolo es una convención repetible que define formato de mensajes, orden temporal de interacciones y acciones al transmitir/recibir. Ejemplos: AppleTalk, IPX/SPX, SNA, TCP/IP. TCP (Transmission Control Protocol) establece formato de segmentos, handshake de conexión, control de flujo y confirmación de recepción."
+    },
+    {
+      "tema": "Servicios de red",
+      "contenido": "Las redes ofrecen servicios (aplicaciones) para intercambio de datos o funciones de conectividad, direccionamiento y enrutamiento. Internet se conoce a través de servicios: WWW, correo electrónico, redes sociales, streaming, videoconferencias, mensajería instantánea, intercambio de archivos, e-learning, juegos en línea, cloud computing, plataformas de transporte o alojamiento (Uber, Airbnb)."
+    },
+    {
+      "tema": "Acceso a servicios en la red",
+      "contenido": "Al pulsar una URL pueden intercambiarse decenas de mensajes: consultas DNS (hasta 6 mensajes), handshake TCP (3 mensajes), establecimiento de conexión segura (TLS), petición HTTP GET y confirmaciones (4 mensajes) y cierre de conexión TCP (4 mensajes). El streaming de audio/vídeo precargado y en tiempo real tiene requisitos de latencia y jitter más estrictos."
+    },
+    {
+      "tema": "Clasificación de redes",
+      "contenido": "Las redes se clasifican según topología, cobertura geográfica, medio físico, tipo de información transportada, quién puede usarla (pública/privada), forma de conexión (conmutada/dedicada/virtual), protocolos, diversidad de equipos, roles de nodos (cliente/servidor vs peer-to-peer), redes Ad Hoc y SDN."
+    },
+    {
+      "tema": "Topologías de red",
+      "contenido": "Punto a punto: conexión única entre dos nodos. Multipunto: varios nodos comparten medio. Topologías comunes: bus (multipunto, todas las señales pasan por todos los nodos), anillo (punto a punto en un ciclo, unidireccional, control de flujo), estrella (nodos conectados a un concentrador central). Otras: malla y árbol, con conexiones múltiples y flujo más complejo."
+    },
+    {
+      "tema": "Cobertura geográfica",
+      "contenido": "LAN (Local Area Network): pequeña área (edificio), tecnologías Ethernet/Wi-Fi. WAN (Wide Area Network): grandes distancias (ciudades/países), enlaces telefónicos, satélite, microondas, fibra, Frame Relay, ATM. MAN (Metropolitan Area Network): área metropolitana. Campus: interconexión de LAN en un campus. SAN (System Area Network): interconecta componentes de un sistema de alto rendimiento. PAN (Personal Area Network): cercanía personal (Bluetooth). BAN/WBAN: redes corporales inalámbricas."
+    },
+    {
+      "tema": "Medio físico de los enlaces",
+      "contenido": "Clasificación según medio: fibra óptica (multimodo, monomodo), cable de cobre (coaxial, par trenzado UTP/STP), medios inalámbricos (radio, microondas, infrarrojo). Cada medio determina velocidad, cobertura y costo."
+    },
+    {
+      "tema": "Tipo de información transportada",
+      "contenido": "Redes diseñadas para datos (evitar pérdida de paquetes), voz (baja latencia) o vídeo (evitar jitter). Actualmente existe convergencia de servicios con requisitos combinados."
+    },
+    {
+      "tema": "Redes públicas y privadas",
+      "contenido": "Red pública: accesible a diversos usuarios (p.ej., telefonía). Red privada: acceso restringido a miembros de la organización."
+    },
+    {
+      "tema": "Formas de conexión",
+      "contenido": "Red conmutada: conexión bajo demanda (p.ej., llamada telefónica). Red dedicada: conexión permanente (arrendada o propietaria). Red virtual: túneles lógicos sobre infraestructura física (VLAN, VPN)."
+    },
+    {
+      "tema": "Protocolos de red comunes",
+      "contenido": "TCP/IP (Internet), Ethernet, Wi-Fi, MPLS, SD-WAN/SDN, SNA, AppleTalk."
+    },
+    {
+      "tema": "Redes propietarias vs abiertas",
+      "contenido": "Redes propietarias (SNA de IBM, AppleTalk) permiten solo equipos de un fabricante, suelen ser más seguras y costosas. Redes abiertas (TCP/IP) permiten hardware diverso y son estándar de Internet."
+    },
+    {
+      "tema": "Roles de los nodos conectados",
+      "contenido": "Red basada en servidor central (Windows Server): servicios autorizados desde un servidor. Red peer-to-peer: cada nodo puede ofrecer y consumir servicios sin servidor central."
+    },
+    {
+      "tema": "Redes Ad Hoc",
+      "contenido": "Redes para esto configuradas ad hoc entre dispositivos (por ejemplo, reunión). Tipos: MANET (Mobile Ad Hoc Network), VANET (Vehicular), SPAN (Smart Phone), iMANET (Internet-based Mobile Ad Hoc)."
+    },
+    {
+      "tema": "Software-Defined Networking (SDN)",
+      "contenido": "Separación del plano de control y del plano de datos para administración centralizada y programable. Usa protocolos como OpenFlow. Ventajas: flexibilidad, automatización, optimización de tráfico, seguridad, reducción de costos. Aplicaciones: centros de datos, redes empresariales, NFV en telecom."
+    },
+    {
+      "tema": "Planos en redes de datos",
+      "contenido": "Data plane: procesa paquetes según estado de reenvío local. Control plane: calcula el estado de reenvío. Management plane: interfaz de administración y monitoreo (SNMP, configuración, estadísticas)."
+    },
+    {
+      "tema": "Dirección y direccionamiento en redes",
+      "contenido": "La dirección indica dónde y a quién va un mensaje. Local vs física: dirección IP identifica hosts en Internet; MAC identifica interfaz en enlace. Comandos para ver direcciones: ipconfig (Windows), ifconfig (Linux), netsh (Windows)."
+    },
+    {
+      "tema": "Direcciones IP y CIDR",
+      "contenido": "IPv4: 32 bits en cuatro octetos decimales (p.ej., 192.168.0.15). IPv6: 128 bits en ocho grupos hexadecimales con \"::\" para ceros consecutivos. CIDR: notación /n indica longitud de prefijo (p.ej., /24 para máscara 255.255.255.0)."
+    },
+    {
+      "tema": "Tipos de direcciones IP",
+      "contenido": "Unicast: un nodo. Multicast: grupo de nodos. Anycast: ruta al nodo más cercano de un grupo. Broadcast: a todos. Alcances: interface-local, link-local, global."
+    },
+    {
+      "tema": "Modelos de redes de datos",
+      "contenido": "Modelo borde-centro: diferencia entre redes de acceso (borde) y backbone (centro). Modelo de capas: arquitecturas de comunicación (OSI y TCP/IP) con funciones específicas en cada nivel."
+    },
+    {
+      "tema": "Modelo OSI",
+      "contenido": "Siete capas: Física, Enlace, Red, Transporte, Sesión, Presentación y Aplicación. Define servicios (qué hace cada capa), interfaces (cómo interactúan capas vecinas) y protocolos (cómo se comunican pares)."
+    },
+    {
+      "tema": "Arquitectura TCP/IP",
+      "contenido": "Cuatro capas: Acceso a red, Internet, Transporte y Aplicación. IP es el corazón del modelo en forma de reloj de arena. Cada capa añade/quita headers para control y direccionamiento."
+    },
+    {
+      "tema": "Ethernet",
+      "contenido": "Tecnología LAN desarrollada por Metcalfe (1973). Velocidades: 10 Mbps, 100 Mbps, 1 Gbps, 10 Gbps, 40 Gbps, 100 Gbps. Medios: coaxial, cable de par trenzado y fibra. Elementos: medio físico, transceptores, reglas de acceso (half/full duplex), tramas (preambulo, dirección destino, origen, tipo, datos, FCS)."
+    },
+    {
+      "tema": "Domain Name System (DNS)",
+      "contenido": "Sistema distribuido que traduce nombres de dominio (p.ej., www.facebook.com) en direcciones IP. Utiliza jerarquía de servidores raíz (13 root servers), TLD y autoritativos. Comando nslookup para consultar la resolución de nombres."
+    }
+  ]
+}
