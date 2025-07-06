@@ -1,108 +1,119 @@
-# PROYECTO_FINAL_REDES
+# PROYECTO\_FINAL\_REDES
 
-Creación de un chatbot en Telegram que actúa como tutor y responde preguntas sobre los fundamentos de la materia Redes de Computadores.
+Creación de un chatbot en Telegram que actúa como tutor y responde preguntas sobre los fundamentos de Redes de Computadores.
 
-## 📂 Estructura del Proyecto
+## Índice
 
-```bash
+* [Estructura del proyecto](#estructura-del-proyecto)
+* [Requisitos](#requisitos)
+* [Instalación](#instalación)
+* [Configuración](#configuración)
+* [Uso](#uso)
+* [Pruebas](#pruebas)
+* [Extensiones futuras](#extensiones-futuras)
+
+## Estructura del proyecto
+
+```text
 proyecto_chatbot_free/
-├── data/                   # Contenidos educativos en formato JSON
+├── data/                # Contenidos educativos en JSON
 │   └── contenidos.json
-├── chatbot/                # Lógica de recuperación de información
+├── chatbot/             # Lógica de recuperación de información
 │   ├── __init__.py
 │   └── retrieval.py
-├── ui/                     # Interfaz del bot en Telegram
+├── ui/                  # Interfaz del bot en Telegram
 │   └── telegram_bot.py
-├── tests/                  # Pruebas automatizadas con pytest
+├── tests/               # Pruebas automatizadas con pytest
 │   └── test_retrieval.py
-├── .env                    # Variables de entorno (no versionar)
-├── .gitignore              # Archivos ignorados por Git
-├── requirements.txt        # Dependencias del proyecto
-└── README.md               # Documentación del proyecto (este archivo)
-⚙️ Características
-🔓 Totalmente gratuito: no depende de servicios de pago ni APIs externas.
+├── .env                 # Variables de entorno (no versionar)
+├── .gitignore           # Archivos ignorados por Git
+├── requirements.txt     # Dependencias del proyecto
+└── README.md            # Documentación del proyecto (este archivo)
+```
 
-🤖 Interfaz Telegram: funciona mediante un bot en Telegram.
+## Requisitos
 
-📚 Recuperación local: usa TF-IDF (scikit-learn) para encontrar la respuesta más relevante en un JSON de contenidos.
+* Python 3.8 o superior
+* Git
+* (Opcional) Entorno virtual con `venv` o `virtualenv`
+* Cuenta de Telegram y un bot creado con BotFather
 
-✅ Pruebas: incluye tests con pytest para validar la lógica de recuperación.
+## Instalación
 
-🛠 Prerrequisitos
-Python 3.8 o superior
+1. Clona el repositorio:
 
-Git
+   ```bash
+   git clone https://github.com/tu-usuario/PROYECTO_FINAL_REDES.git
+   cd PROYECTO_FINAL_REDES
+   ```
+2. (Opcional) Crea y activa un entorno virtual:
 
-(Opcional) virtualenv o herramientas de entornos virtuales
+   ```bash
+   python -m venv .venv
+   # Windows
+   .\.venv\Scripts\activate
+   # macOS / Linux
+   source .venv/bin/activate
+   ```
+3. Instala las dependencias:
 
-Un bot de Telegram creado mediante BotFather y su token
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-🚀 Instalación y Configuración
-Clonar el repositorio
+## Configuración
 
-bash
-Copiar
-Editar
-git clone https://github.com/tu-usuario/PROYECTO_FINAL_REDES.git
-cd PROYECTO_FINAL_REDES
-Crear y activar entorno virtual (recomendado)
+1. En la raíz del proyecto, crea un archivo `.env`:
 
-bash
-Copiar
-Editar
-python -m venv .venv
+   ```ini
+   TELEGRAM_TOKEN=TU_TOKEN_DE_TELEGRAM
+   ```
+2. Reemplaza `TU_TOKEN_DE_TELEGRAM` por el token que BotFather te proporcionó.
+3. Verifica que `.env` esté listado en `.gitignore` para no subirlo a GitHub.
 
-# Windows
-.\.venv\Scripts\activate
+## Uso
 
-# macOS / Linux
-source .venv/bin/activate
-Instalar dependencias
+Para iniciar el bot, ejecuta:
 
-bash
-Copiar
-Editar
-pip install -r requirements.txt
-Configurar variables de entorno
-
-Crea un archivo .env en la raíz con el siguiente contenido:
-
-ini
-Copiar
-Editar
-TELEGRAM_TOKEN=TU_TOKEN_DE_TELEGRAM
-Reemplaza TU_TOKEN_DE_TELEGRAM por el token que obtuviste de BotFather.
-
-Ignorar archivos sensibles
-
-Asegúrate de que .env esté listado en .gitignore para no exponerlo.
-
-🏃‍♂️ Ejecución del Bot
-Iniciar el bot
-
-bash
-Copiar
-Editar
+```bash
 python ui/telegram_bot.py
-Verás en consola:
+```
 
-mathematica
-Copiar
-Editar
+En la consola verás:
+
+```
 Bot de Telegram iniciado. Presiona Ctrl+C para detener.
-En Telegram, busca tu bot por su username (p. ej. ChatRedesBot_bot) o visita t.me/ChatRedesBot_bot.
+```
 
-Envía el comando /start y luego pregunta, por ejemplo:
+Luego, en Telegram:
 
-Copiar
-Editar
-¿Qué es una red de datos?
-El bot te responderá con el contenido almacenado en data/contenidos.json.
+1. Busca tu bot por su username (p.ej. `ChatRedesBot_bot`).
+2. Envía el comando `/start`.
+3. Formula preguntas, por ejemplo:
 
-🧪 Pruebas
-Para verificar que la lógica de recuperación funciona correctamente:
+   ```text
+   ¿Qué es una red de datos?
+   ```
+4. El bot responderá con contenido extraído de `data/contenidos.json`.
 
-bash
-Copiar
-Editar
+## Pruebas
+
+Para ejecutar las pruebas unitarias:
+
+```bash
 pytest -q
+```
+
+Deberías ver:
+
+```
+. .
+2 passed
+```
+
+## Extensiones futuras
+
+* Añadir más módulos educativos al archivo JSON.
+* Desplegar una interfaz web (Gradio) para el chatbot.
+* Integrar un modelo de lenguaje local para respuestas más flexibles.
+* Implementar métricas de uso y logging de preguntas frecuentes.
